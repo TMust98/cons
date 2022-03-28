@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <div align="center">
+        <h1>Просмотр контракта</h1>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+
+            <p>
+                {{ form.Dment.label }}<br>
+                {{ form.Dment(size=32) }}<br>
+                {% for error in form.Dment.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.Who.label }}<br>
+                {{ form.Who(size=32) }}<br>
+                {% for error in form.Who.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.KTRU.label }}<br>
+                {{ form.KTRU(size=32) }}<br>
+                {% for error in form.KTRU.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.Name.label }}<br>
+                {{ form.Name(size=32) }}<br>
+                {% for error in form.Name.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.StageTZ.label }}<br>
+                {{ form.StageTZ(cols="35", rows="4") }}<br>
+                {% for error in form.StageTZ.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.PlanSrokRazm.label }}<br>
+                {{ form.PlanSrokRazm(size=32) }}<br>
+                {% for error in form.PlanSrokRazm.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.DateSendToKom.label }}<br>
+                {{ form.DateSendToKom(size=32) }}<br>
+                {% for error in form.DateSendToKom.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.DateOfContract.label }}<br>
+                {{ form.DateOfContract(size=32) }}<br>
+                {% for error in form.DateOfContract.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.NGosContract.label }}<br>
+                {{ form.NGosContract(size=32) }}<br>
+                {% for error in form.NGosContract.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.Organization.label }}<br>
+                {{ form.Organization(size=32) }}<br>
+                {% for error in form.Organization.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.SrokPostavkiPoGK.label }}<br>
+                {{ form.SrokPostavkiPoGK(size=32) }}<br>
+                {% for error in form.SrokPostavkiPoGK.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.Pretensii.label }}<br>
+                {{ form.Pretensii(size=32) }}<br>
+                {% for error in form.Pretensii.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.RabWDocs .label }}<br>
+                {{ form.RabWDocs (size=32) }}<br>
+                {% for error in form.RabWDocs .errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.DateGiveToKom.label }}<br>
+                {{ form.DateGiveToKom(size=32) }}<br>
+                {% for error in form.DateGiveToKom.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+{% endblock %}

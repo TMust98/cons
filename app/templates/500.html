@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 align="center" style="font-size:30pt">Произошла непредвиденная ошибка!</h1>
+<!--    <p align="center" style="font-size:20pt">Ничего страшного! Возможно, мы уже знаем о прорблеме.</p>-->
+    <p align="center" style="font-size:20pt">Сообщите в ОИС время и после каких действий получилась эта ошибка</p>
+    <p align="center" style="font-size:20pt"><a href="{{ url_for('index') }}">Вернуться назад</a></p>
+{% endblock %}

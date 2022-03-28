@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <div align="center">
+        <h1>Новый контракт</h1>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+
+            <p>
+                {{ form.KTRU.label }}<br>
+                {{ form.KTRU(size=32) }}<br>
+                {% for error in form.KTRU.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.Name.label }}<br>
+                {{ form.Name(size=32) }}<br>
+                {% for error in form.Name.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.StageTZ.label }}<br>
+                {{ form.StageTZ(cols="35", rows="4") }}<br>
+                {% for error in form.StageTZ.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.PlanSrokRazm.label }}<br>
+                {{ form.PlanSrokRazm(size=32) }}<br>
+                {% for error in form.PlanSrokRazm.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </div>
+{% endblock %}

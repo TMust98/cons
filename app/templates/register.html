@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <div align="center">
+        <h1>Регистрация</h1>
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+                {{ form.username.label }}<br>
+                {{ form.username(size=32) }}<br>
+                {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32) }}<br>
+                {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.password2.label }}<br>
+                {{ form.password2(size=32) }}<br>
+                {% for error in form.password2.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.fio.label }}<br>
+                {{ form.fio(size=32) }}<br>
+                {% for error in form.fio.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.dment.label }}<br>
+                {{ form.dment(size=32) }}<br>
+                {% for error in form.dment.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                {{ form.dment_RU.label }}<br>
+                {{ form.dment_RU(size=32) }}<br>
+                {% for error in form.dment_RU.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+                {{ form.dm_Head.label }} {{ form.dm_Head() }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+        <div class="row">
+            <div class="col">
+                Возможные типы отделов:<br>
+                OIS - Отдел информатизации и свзяи<br>
+                PTV - Отдел пожаро-технического вооружения<br>
+                LSH - Сектор охраны труда<br>
+                OMTS - Отдел материально-технического снабжения<br>
+                OORSR - Отдел организации ремонтно-строительных работ<br>
+                OGE - Отдел главного энергетика<br>
+                OOZIS - Отдел по обслуживанию зданий и сооружений<br>
+                SVOD - Все отделы, кому нужны сводные таблица контрактов<br>
+            </div>
+        </div>
+    </div>
+{% endblock %}

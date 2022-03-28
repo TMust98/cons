@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+<div align="center">
+    <table>
+        <tr valign="top">
+            <td align="center">
+                <h1>Пользователь: {{ user.username }}</h1>
+                {% if user.last_seen %}<p>Последние действия: {{ user.last_seen }}</p>{% endif %}
+            </td>
+        </tr>
+    </table>
+</div>
+{% endblock %}
